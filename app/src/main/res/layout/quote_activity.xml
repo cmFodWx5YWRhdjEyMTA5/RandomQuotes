@@ -33,6 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.80"
             android:text="RandomQuotes"
+            android:textAlignment="center"
             android:paddingLeft="27dp"
             android:textSize="28dp"
             android:textColor="#ffffff"/>
