@@ -16,28 +16,27 @@
         android:textSize="27dp"
         android:textAlignment="center"
         android:id="@+id/main_title"
+        android:layout_marginTop="34dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="55dp" />
+        android:layout_alignParentStart="true" />
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:src="@drawable/vector_socrates"
         android:id="@+id/main_image"
-        android:layout_below="@+id/main_title"
+        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="84dp" />
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/get_quote_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/main_image"
+        android:text="get quote"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
-        android:text="get quote" />
+        android:layout_marginBottom="21dp" />
 
 </RelativeLayout>
