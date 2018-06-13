@@ -5,38 +5,97 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#154350"
-    tools:context="org.pctechtips.george.randomquotes.MainActivity">
+    android:background="#354048"
+    tools:context="org.pctechtips.george.randomquotes.QuotesActivity">
 
-    <TextView
+    <!--custome toolbar-->
+    <!-- Title and share button -->
+    <ImageView
+        android:id="@+id/aristoteles_imageview"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/vector_socrates"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true" /><!--android:background="@drawable/drawble"
+        android:padding="3dp"-->
+
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Random Quotes"
-        android:textColor="#fff"
-        android:textSize="27dp"
-        android:textAlignment="center"
-        android:id="@+id/main_title"
-        android:layout_marginTop="34dp"
+        android:orientation="horizontal"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout">
 
-    <ImageView
-        android:layout_width="match_parent"
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.80"
+            android:paddingLeft="27dp"
+            android:text="Daily Quotes"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:textColor="#17a2b8"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- textview for displaying quote / aligned center-->
+    <TextView
+        android:id="@+id/quote_text"
+        android:layout_width="wrap_content"
         android:layout_height="200dp"
-        android:src="@drawable/vector_socrates"
-        android:id="@+id/main_image"
-        android:layout_centerVertical="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/default_quote"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="#fff"
+        android:textSize="14dp"
+        android:layout_marginBottom="49dp"
+        android:layout_above="@+id/next_quote"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <Button
-        android:id="@+id/get_quote_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="get quote"
+    <!-- imageview as button for next quote / aligned bottom-->
+    <ImageView
+        android:id="@+id/next_quote"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom|right"
+        android:background="@drawable/ic_next_icon"
+        android:clickable="true"
+        android:onClick="getRandomQuote"
+        tools:ignore="ContentDescription"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:id="@+id/back_quote"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        app:srcCompat="@drawable/ic_back_icon"
+        android:layout_alignTop="@+id/next_quote" />
+
+    <ImageView
+        android:id="@+id/share_quote"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="21dp" />
+        android:paddingBottom="3dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="3dp"
+        app:srcCompat="@drawable/ic_icon_share" />
+
 
 </RelativeLayout>
